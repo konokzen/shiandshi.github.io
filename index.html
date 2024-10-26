@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ขอเป็นแฟน</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #ffe4e1;
+        }
+        h1 {
+            color: #ff69b4;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #ff69b4;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+        img {
+            display: none;
+            margin-top: 20px;
+            width: 300px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="message">💖 มิ้วคะ.. เป็นแฟนกับเซนต์ได้ไหม? 💖</h1>
+    <button onclick="askOut()">ตกลงค่ะ 😊</button>
+
+    <script>
+        function askOut() {
+            let answer = confirm("เป็นแฟนกับเรานะ 💖");
+            if (answer) {
+                // แสดงข้อความเมื่อกดตกลง
+                document.getElementById("message").innerHTML = "เย้! เราเป็นแฟนกันแล้ว! 💕";
+
+            } else {
+                document.getElementById("message").innerHTML = "ไม่เป็นไรนะ เราจะรอต่อไป 😢";
+            }
+        }
+    </script>
+</body>
+</html>
